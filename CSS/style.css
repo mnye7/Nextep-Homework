@@ -1,0 +1,235 @@
+/* BASE CSS */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+body{
+  background: white;
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  background: url('/imgs/mandala-20.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  margin-bottom: auto;
+  position: relative;
+}
+
+.main-body {
+  padding-bottom: 2em;
+}
+
+
+
+a.main-menu-item {
+  text-decoration: none;
+  color: red;
+  font-size: 1.4em;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  transition: color 250ms ease-out;
+}
+
+a.main-menu-item:hover {
+  color: pink;
+}
+
+
+
+
+/* HEADER */
+
+.site-logo {
+  width: 4em;
+}
+
+.main-header{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 3.75em;
+  width: 100%;
+  margin: 1em auto;
+}
+
+.site-logo{
+  height: 5.4em;
+  width: 5.4em;
+  margin-left: 2em;
+  filter: invert(1);
+}
+
+
+.main-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+  margin-right: 2em;
+}
+
+.main-menu-nav{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 1.8em;
+  padding-right: 2em;
+}
+
+
+
+/* GALLERY PAGE TITLE */
+
+.gallery-page-title{
+  text-align: center;
+  margin-top: 3em;
+  letter-spacing: 0.9em;
+  font-size: 2.7em;
+  color: #163247;
+  text-shadow:4px 4px 10px #fff, 4px 4px 10px #1b1a1a;
+}
+
+
+/* GALLERY */
+
+
+
+.main-drink-gallery {
+  display: flex;
+  flex-direction: row;
+  margin: 10% 7%;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+
+.drink-thumbnail {
+  display: flex;
+  justify-content: center;
+  border: black 5px;
+  margin: 10px 20px;
+  position: relative;
+  width: 250px;
+  cursor: pointer;
+}
+
+.drink-pic {
+  width: 75%;
+  height: 100%;
+  z-index: 0;
+  filter: blur(2px);
+  filter: brightness(.5);
+  transition: 250ms ease-out;
+}
+
+.drink-thumbnail:hover .drink-pic {
+  filter: brightness(1);
+}
+
+.drink-title {
+  letter-spacing: 7.9px;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  max-width: 90%;
+  position: absolute;
+  z-index: 999;
+  margin-top: 80%;
+  text-align: center;
+  text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+}
+
+/* FOOTER */
+
+.main-footer {
+  display: flex;
+  justify-content: center;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 5em;
+  /* position: absolute; */
+  margin: 1em;
+}
+
+/* FOOTER BUTTONS */
+
+.footer-button {
+  color: black;
+  text-transform: uppercase;
+  padding: 18px 26px;
+  border: 3px solid white;
+  transition: background 250ms ease-out, color 250ms ease-out;
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  background: white;
+  margin: .5em;
+}
+
+.footer-button:hover {
+  color: white;
+  background: black;
+  border: 3px solid black;
+}
+
+.footer-button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 768px) {
+  .main-header {
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    align-items: center;
+  }
+
+  .site-logo {
+    margin-left: 0;
+    height: 8em;
+    width: 8em;
+    margin-top: -4.5em;
+  }
+
+  .main-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-menu-nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 120px;
+  }
+
+  a.main-menu-item {
+    width: 100%;
+    margin-left: .8em;
+    font-size: 1.2em;
+  }
+
+  .gallery-page-title {
+    font-size: 2.2em;
+  }
+}
